@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Layouts</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+          background-color: #2980b9;
+          padding: 30px;
+          text-align: center;
+          font-size: 35px;
+          color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+          float: left;
+          width: 20%;
+          background: #16a085;
+          padding: 60px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
+        article {
+          float: left;
+          padding: 20px;
+          width: 80%;
+          background-color: #f1f1f1;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+          background: #ccc;
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+          background-color: #2c3e50;
+          padding: 10px;
+          text-align: center;
+          color: #bdc3c7;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+          nav, article {
+            width: 100%;
+            height: auto;
+          }
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h2>Curso Front-End - HTML</h2>        
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">INÍCIO</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="./4-2-formularios.html">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Títilo do artigo</h1>
+
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed urna pellentesque, consectetur metus a, suscipit
+                mauris. Integer non velit laoreet, auctor nunc a, tincidunt urna. Ut congue facilisis elementum. Suspendisse ultrices
+                velit massa, nec ornare sem congue sed. Quisque vulputate gravida massa sit amet luctus. Donec mollis massa quam, ac
+                suscipit ante vehicula sed. Nunc nec quam pharetra, mattis sem ut, congue velit.</p>
+                
+            <p> Curabitur dignissim magna a ipsum accumsan, ac venenatis neque molestie. Donec vulputate accumsan quam, in blandit leo
+                iaculis quis. Quisque in tortor magna. Vestibulum ac aliquam velit. Vestibulum ac consectetur purus. Nullam et aliquet
+                mi. Morbi nec orci id sem lobortis scelerisque at vel libero. Vivamus egestas congue convallis. In in facilisis orci, eu
+                dignissim dui. In massa nulla, rhoncus nec elit et, vehicula semper dolor.</p>
+            </article>
+    </section>  
+</body>
+
+<footer>
+    <p>Desenvolvido por Luciano</p>
+</footer>
+</html>
